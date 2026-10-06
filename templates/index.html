@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RealEstateAI</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <div class="logo">
+            RealEstate<span>AI</span>
+        </div>
+
+        <nav>
+            <a href="#prediction">Price Prediction</a>
+            <a href="#recommendation">Recommendations</a>
+            <a href="#assistant">AI Assistant</a>
+            <a href="#rag">Knowledge Assistant</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="badge">
+                AI-Powered Real Estate Intelligence
+            </p>
+
+            <h1>
+                Make Smarter
+                <span>Property Decisions</span>
+            </h1>
+
+            <p>
+                Predict property prices, discover suitable
+                properties, and get AI-powered real estate
+                insights.
+            </p>
+
+            <a
+                href="#prediction"
+                class="hero-button"
+            >
+                Explore Platform
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+
+    <section class="features">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                💰
+            </div>
+
+            <h3>
+                Price Prediction
+            </h3>
+
+            <p>
+                Estimate property prices using
+                machine learning.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🔎
+            </div>
+
+            <h3>
+                Smart Recommendations
+            </h3>
+
+            <p>
+                Find properties matching your
+                budget and preferences.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🤖
+            </div>
+
+            <h3>
+                AI Assistant
+            </h3>
+
+            <p>
+                Ask questions about real estate
+                and property decisions.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📚
+            </div>
+
+            <h3>
+                Knowledge Assistant
+            </h3>
+
+            <p>
+                Get answers from the real estate
+                knowledge base.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Price Prediction -->
+
+    <section
+        class="section"
+        id="prediction"
+    >
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                MACHINE LEARNING
+            </p>
+
+            <h2>
+                Property Price Prediction
+            </h2>
+
+            <p>
+                Enter property details to estimate
+                its price.
+            </p>
+
+        </div>
+
+
+        <div class="coming-card">
+
+            <h3>
+                Price Prediction Module
+            </h3>
+
+            <p>
+                ML model is ready. The prediction form
+                will be connected in the next step.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Recommendation -->
+
+    <section
+        class="section"
+        id="recommendation"
+    >
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                SMART SEARCH
+            </p>
+
+            <h2>
+                Property Recommendations
+            </h2>
+
+            <p>
+                Find properties according to your
+                budget and preferences.
+            </p>
+
+        </div>
+
+
+        <form
+            class="form-card"
+            id="recommendationForm"
+        >
+
+            <div class="form-group">
+
+                <label>
+                    Budget (PKR)
+                </label>
+
+                <input
+                    type="number"
+                    name="budget"
+                    placeholder="20000000"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    City
+                </label>
+
+                <input
+                    type="text"
+                    name="city"
+                    placeholder="Lahore"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Bedrooms
+                </label>
+
+                <input
+                    type="number"
+                    name="bedrooms"
+                    placeholder="4"
+                    min="0"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Property Type
+                </label>
+
+                <input
+                    type="text"
+                    name="property_type"
+                    placeholder="House"
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="primary-button"
+            >
+                Find Properties
+            </button>
+
+        </form>
+
+
+        <div
+            id="recommendationResults"
+            class="results"
+        ></div>
+
+    </section>
+
+
+    <!-- AI Assistant -->
+
+    <section
+        class="section"
+        id="assistant"
+    >
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                GENERATIVE AI
+            </p>
+
+            <h2>
+                AI Real Estate Assistant
+            </h2>
+
+            <p>
+                Ask anything about property buying,
+                pricing, and real estate decisions.
+            </p>
+
+        </div>
+
+
+        <form
+            class="form-card"
+            id="aiForm"
+        >
+
+            <div class="form-group">
+
+                <label>
+                    Your Question
+                </label>
+
+                <textarea
+                    name="question"
+                    placeholder="What factors should I consider before buying a house?"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="primary-button"
+            >
+                Ask AI
+            </button>
+
+        </form>
+
+
+        <div
+            id="aiResult"
+            class="answer-card"
+        ></div>
+
+    </section>
+
+
+    <!-- RAG -->
+
+    <section
+        class="section"
+        id="rag"
+    >
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                RAG KNOWLEDGE BASE
+            </p>
+
+            <h2>
+                Real Estate Knowledge Assistant
+            </h2>
+
+            <p>
+                Ask questions and get answers based
+                on the uploaded knowledge documents.
+            </p>
+
+        </div>
+
+
+        <form
+            class="form-card"
+            id="ragForm"
+        >
+
+            <div class="form-group">
+
+                <label>
+                    Knowledge Question
+                </label>
+
+                <textarea
+                    name="question"
+                    placeholder="What documents should I verify before buying a property?"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="primary-button"
+            >
+                Search Knowledge Base
+            </button>
+
+        </form>
+
+
+        <div
+            id="ragResult"
+            class="answer-card"
+        ></div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 RealEstateAI — AI Real Estate
+            Intelligence Platform
+        </p>
+
+    </footer>
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
